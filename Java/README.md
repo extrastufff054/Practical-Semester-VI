@@ -1,10 +1,10 @@
 # Practical List
 
-1. Sum of two numbers.
-2. Client-Socket programming.
+1. Sum of two numbers. -> Done
+2. Client-Socket programming. -> Done
 3. Showing JDBC connectivity.
 4. Implement transaction management.
-5. Establish URL connection.
+5. Establish URL connection. -> Done
 6. Implement servlet context interface.
 7. Implement servlet conflict interface.
 8. Implement filter conflict interface.
