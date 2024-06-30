@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/your_database</property>
+        <property name="connection.username">your_username</property>
+        <property name="connection.password">your_password</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <mapping class="com.example.entities.Employee"/>
+        <mapping class="com.example.entities.Department"/>
+    </session-factory>
+</hibernate-configuration>
+
+Configuration configuration = new Configuration().configure();
+SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+Session session = sessionFactory.openSession();
+
+// Save an entity
+session.beginTransaction();
+Employee employee = new Employee("John Doe", 50000.0);
+session.save(employee);
+session.getTransaction().commit();
+
+// Retrieve an entity
+Employee retrievedEmployee = session.get(Employee.class, 1);
+System.out.println(retrievedEmployee.getName());
+
+// Update an entity
+session.beginTransaction();
+retrievedEmployee.setSalary(55000.0);
+session.update(retrievedEmployee);
+session.getTransaction().commit();
+
+// Delete an entity
+session.beginTransaction();
+session.delete(retrievedEmployee);
+session.getTransaction().commit();
+
+
+session.close();

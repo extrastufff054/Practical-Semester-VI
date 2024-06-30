@@ -8,7 +8,7 @@
 6. Implement servlet context interface. -> Kinda runs
 7. Implement servlet conflict interface. -> Kinda runs
 8. Implement filter conflict interface. -> Done
-9. Show session management.
-10. Implement JSP implicit objects.
-11. Show hibernate mapping.
+9. Show session management. -> Done
+10. Implement JSP implicit objects. -> Kinda runs
+11. Show hibernate mapping. -> Hibernate and MySQL JAR File issue
 12. Implement transaction management in Spring framework.
