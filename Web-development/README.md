@@ -12,5 +12,5 @@ Web Development Practical File
 8. Implement Hooks (useState and useEffect) in React. -> Done
 9. How to handle form elements in React. -> Done
 10. Implement node.js events. -> Done
-11. Create database in MySQL and implement operations on it.
+11. Create database in MySQL and implement operations on it. -> Get output 
 12. Pass UserID to frontend.
